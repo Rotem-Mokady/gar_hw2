@@ -37,9 +37,11 @@ def my_sum_operation2(n1, n2):
     return total
 
 
-# Call the decorated function
-result1 = my_sum_operation1(1000000)
-print(f"Result: {result1}")
-result2 = my_sum_operation2(5000000, 66666666)
-print(f"Result: {result2}")
+if __name__ == '__main__':
+
+    # Call the decorated function
+    result1 = my_sum_operation1(1000000)
+    print(f"Result: {result1}")
+    result2 = my_sum_operation2(5000000, 66666666)
+    print(f"Result: {result2}")
 
