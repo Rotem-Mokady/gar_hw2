@@ -100,17 +100,17 @@ class HolidayFruitBasket(FruitBasket):
         super().__init__()
         self.greeting_holiday = greeting_holiday
 
-    def getPrice(self):
+    def BasketPrice(self) -> Union[int, float]:
         """
         Set a new price for the basket,
         :return: numeric.
         """
         # get original basket's price
-        original_price = self.BasketPrice()
+        original_price = super().BasketPrice()
         # return the price with discount of 5%
         return original_price * 0.95
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         # add the greeting holiday to object's representation
         basket_message = super().__repr__()
         return f"{self.greeting_holiday}\n{basket_message}"
